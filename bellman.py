@@ -23,7 +23,8 @@ def bellMan(edge,src,dst):
         length-=1
     
     for x,y,z in edge:
-        if d[x]+z:
+        if d[x]+z != d[y]:
+            return "cycle detected"
     if dst not in d:
         return -1
     return d[dst]
