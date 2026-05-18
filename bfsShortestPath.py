@@ -4,6 +4,7 @@ def shortestPath(graph,src,dst):
     final={}
     visited=set()
     parent={src:None}
+    visited.add(src)
     path=[]
     while queue:
         curr,dist=queue.popleft()
