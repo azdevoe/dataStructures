@@ -9,5 +9,18 @@ def findMax(arr):
     answer =findMaxsub(arr,index,maxV)
     return answer
 
-arr=[3, 7, 2, 9, 1]
-print(findMax(arr))
+
+def typeOf(arr):
+    if type(arr) == list:
+        return "list"
+    return "int"
+def flatten(arr,result):
+    for num in arr:
+        if typeOf(num) == "list":
+            flatten(num,result)
+        else:
+            result.append(num)
+    return result
+
+arr=[1, [2, [3, 4], 5], 6],
+print(flatten(arr,[]))
