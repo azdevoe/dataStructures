@@ -3,6 +3,7 @@ def longestUnique(str):
     curr=''
     final=0
     dic={}
+    #Fc1@Students
     for end in range(len(str)):
         curr=curr+str[end]
         dic[str[end]]=dic.get(str[end],0)+1

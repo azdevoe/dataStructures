@@ -1,4 +1,4 @@
-from collections import deque
+from collections import deque,Counter
 def firstNeg(arr,size):
     curr=start=0
     queue=deque([])
@@ -19,4 +19,3 @@ def firstNeg(arr,size):
             curr=curr-arr[start]
             start+=1
     return final
-print(firstNeg([12, -1, -7, 8, -15, 30, 16, 28],3))
