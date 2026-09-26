@@ -21,11 +21,12 @@ def reverser(arr,left,right):
         right-=1
         
 def rotate(arr,k):
+    k=k%len(arr)
     reverser(arr,0,len(arr)-1)
     reverser(arr,0,k-1)
     reverser(arr,k,len(arr)-1)
 
 
 arr=[5,4,3,2,1]
-print(rotate(arr,3))
+print(rotate(arr,11))
 print(arr)
